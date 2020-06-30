@@ -1,0 +1,24 @@
+doctype html
+html(lang='en')
+  include includes/head.pug
+
+  body
+    div(class='grid-container')
+      div(class='header' id='responsivenav')
+        include includes/nav.pug
+
+      div(class='main')
+        div(class="form")
+          form(id='login_form' method='post' action='/login')
+            label(for='email') Email *
+              input(class="input" type='email' name='email' size='30')
+            label(for='password') Passwort *
+              input(class="input" type='password' name='password' size='30')
+            label(for='send')
+              input(class='sendbutton' type='submit' name='send' value='Send')
+
+      div(class='footer')
+        include includes/foot.pug
+
+    script
+      include includes/script.js

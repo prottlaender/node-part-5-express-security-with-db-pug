@@ -1,0 +1,18 @@
+doctype html
+html(lang='en')
+  include includes/head.pug
+
+  body
+    div(class='grid-container')
+      div(class='header' id='responsivenav')
+        include includes/nav.pug
+
+      div(class='main')
+        h1 Welcome to my Home Page (Pug Version 1.0)
+        p(class='maintext') The content of my page goes here
+
+      div(class='footer')
+        include includes/foot.pug
+
+    script
+      include includes/script.js
