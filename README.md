@@ -10,7 +10,7 @@ You can read how to install node and npm on Mac OS on [Digitaldocblog](https://d
 - #> mv .env_ .env
 - #> chmod 600 .env
 - #> nano .env (adapt your environment variables)
-- #> node blog.js
+- #> node secserverpug.js
 
 **3. Documentation**
 - currently under construction
