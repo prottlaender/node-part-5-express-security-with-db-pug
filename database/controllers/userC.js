@@ -31,7 +31,7 @@ module.exports = {
     await newUser.save(function(err, user) {
           if (err) {
             // if a validation err occur end request and send response
-            res.status(400).send({ code: 400, status: 'Bad Request', message: err.message })
+            res.status(400).render('err', { title: 'Error Page (PUG)', code: 400, status: 'Bad Request', message: err.message })
           } else {
             // req.session.userId = user._id
 
@@ -48,7 +48,7 @@ module.exports = {
 
     User.findOne({ email: req.body.email }, function(error, user) {
       if (!user) {
-        res.status(400).send({ code: 400, status: 'Bad Request', message: 'No User found with this email' })
+        res.status(400).render('err', { title: 'Error Page (PUG)', code: 400, status: 'Bad Request', message: 'No User found with this email' })
 
       } else {
         if (bcrypt.compareSync(req.body.password, user.password)) {
@@ -61,7 +61,7 @@ module.exports = {
           res.redirect('/dashboard')
 
         } else {
-          res.status(400).send({ code: 400, status: 'Bad Request', message: 'Wrong User password' })
+          res.status(400).render('err', { title: 'Error Page (PUG)', code: 400, status: 'Bad Request', message: 'Wrong User password' })
         }
 
       }

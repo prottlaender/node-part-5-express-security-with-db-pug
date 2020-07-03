@@ -57,8 +57,8 @@ app.set('views', './views')
 
 // use secure HTTP headers using helmet
 app.use(helmet())
-// use express.static file folder in the root of the app
-app.use(express.static('static'));
+// use express.static and locate static files in /static folder in the root of the app
+app.use(express.static('./static'));
 // use express.urlencoded to parse incomming requests with urlencoded payloads
 app.use(express.urlencoded({ extended: true }));
 // use session to create session and session cookie

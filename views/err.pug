@@ -1,0 +1,23 @@
+doctype html
+- var status = `${status}`
+- var code = `${code}`
+- var message = `${message}`
+
+html(lang='en')
+  include includes/head.pug
+
+  body
+    div(class='grid-container')
+      div(class='header' id='responsivenav')
+        include includes/nav.pug
+
+      div(class='main')
+        p(class='maintext') status: #{status}
+        p(class='maintext') code: #{code}
+        p(class='maintext') message: #{message}
+
+      div(class='footer')
+        include includes/foot.pug
+
+    script
+      include includes/script.js

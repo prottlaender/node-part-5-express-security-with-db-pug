@@ -29,6 +29,12 @@ body {
   color: #28283e;
 }
 
+/* hover effect for each navigation link */
+.header a.link:hover {
+  background-color: #28283e;
+  color: #ffffff;
+}
+
 /* style the burgericon link on the right */
 .header a.burgericon {
   float: right;
@@ -45,13 +51,8 @@ body {
   transition: 0.4s;
 }
 
-/* hover effect for each navigation link */
-.header a.link:hover {
-  background-color: #28283e;
-  color: #ffffff;
-}
-
 /* style burgerlines after on onclick event */
+/* the .change class will be added onclick with classList.toggle in the JavaScript */
 /* rotate first bar */
 .change #bar1 {
   /* rotate -45 degrees (counterclockwise) move 15px down in Y-direction */
@@ -70,9 +71,7 @@ body {
 /* for screens up to 600px remove the navigation links and show the burgericon instead */
 @media screen and (max-width: 600px) {
   .header a.link { display: none; }
-  .header a.burgericon {
-    display: block;
-  }
+  .header a.burgericon { display: block; }
 }
 
 /* for screens up to 600px and after onclick event the responsive class will be added to the header */
