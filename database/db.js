@@ -4,8 +4,8 @@ const env = envy()
 const mongodbpath = env.mongodbpath
 
 const mongoose = require('mongoose');
-mongoose.set('useNewUrlParser', true);
-mongoose.set('useUnifiedTopology', true);
+//mongoose.set('useNewUrlParser', true);
+//mongoose.set('useUnifiedTopology', true);
 
 const StartMongoServer = async function() {
   try {
